@@ -41,6 +41,20 @@ module PagerDuty
           res.error!
         end
       end
+
+      def entries(id, since_date = nil, until_date = nil, overflow = false)
+        res = api_call("schedules/#{id}/entries", {
+         :since => since_date,
+         :until => until_date,
+         :overflow => (overflow ? "true" : "false")
+        })
+        case res
+        when Net::HTTPSuccess
+          JSON.parse(res.body)
+        else
+          res.error!
+        end
+      end
     end
   end
 end
