@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'pagerduty-full'
-  s.version     = '0.1'
+  s.version     = '0.1.1'
   s.date        = '2013-09-09'
   s.summary     = "PagerDuty API Access"
   s.description = "Access to all of PagerDuty's API"
