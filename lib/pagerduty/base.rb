@@ -43,5 +43,9 @@ module PagerDuty
     def Schedule()
       PagerDuty::Resource::Schedule.new(@apikey, @subdomain)
     end
+
+    def User()
+      PagerDuty::Resource::User.new(@apikey, @subdomain)
+    end
   end
 end
